@@ -1,0 +1,15 @@
+<section class="list">
+    <% @hashtags.each do |hashtag| %>
+        <%= link_to hashtag do %>
+            <section class="item">
+                #<%= hashtag.name %>
+            </section>
+        <% end %>
+    <% end %>
+</section>
+
+<div>
+    <section class="admin_buttons">
+        <%= link_to "CONNECT", new_tag_path(@article) if authenticated? %>
+    </section>
+</div>

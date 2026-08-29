@@ -1,0 +1,161 @@
+/* app/assets/stylesheets/application.css */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  text-align: center;
+  background-color: rgb(248, 237, 223);
+}
+
+nav {
+  justify-content: flex-end;
+  display: flex;
+  font-size: 0.875em;
+  gap: 0.5rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+nav a {
+  display: inline-block;
+}
+
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+
+.alert,
+.error {
+  color: red;
+}
+
+.notice {
+  color: green;
+}
+
+section.navbar a{
+    text-align: center;
+    text-decoration: underline overline;
+    font-size: 1.5em;
+    color: rgb(219, 133, 219);
+}
+
+section.bottom_text {
+    font-size: 0.8em;
+    color: grey;
+}
+
+section.list {
+    padding: 0.3em;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    border-radius: 5pt;
+    outline-color: rgb(245, 172, 83);
+    outline-style: double;
+    outline-width: 3px;
+}
+
+section.item {
+  display: block;
+  gap: 1rem;
+  flex-direction: row;
+  padding: 1em;
+  border-radius: 3pt;
+  outline-color: rgb(250, 217, 178);
+  outline-style: dashed;
+  outline-width: 3px;
+}
+
+section.title {
+    font-weight: bold;
+    font-size: 2em;
+    padding: 1rem;
+}
+
+section.subtitle {
+    font-size: 1.5em;
+    padding: 0.3rem;
+}
+
+section.date {
+    font-size: 1em;
+    text-decoration: none;
+}
+
+section.article_title {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+section.article_tags a{
+    font-style: italic;
+    padding: 0.2rem;
+    text-decoration: none;
+    color: rgb(203, 154, 89);
+}
+
+section.article_body {
+    background-color: rgb(236, 197, 197);
+    max-width: 1024px;
+    text-align: justify;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+section.show_article {
+    background-color: rgb(250, 231, 231);
+    max-width: 1024px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 20px;
+    border-color: rgb(208, 173, 127);
+    border-style: double;
+}
+
+section.input {
+    font-size: 20px;
+    background-color: green;
+    max-width: 512px;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+section.rich_text {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+section.share_button a{
+    max-width: 80px;
+    margin: 0 auto;
+    color: bisque;
+    padding: 10px;
+    gap: 0.5rem;
+    text-decoration: none;
+    background-color: rgb(38, 114, 84);
+    border-radius: 5px;
+}
+section.back_button a{
+    max-width: 80px;
+    margin: 0 auto;
+    color: bisque;
+    padding: 10px;
+    gap: 0.5rem;
+    text-decoration: none;
+    background-color: rgb(52, 165, 177);
+    border-radius: 5px;
+
+}
+
+section.admin_buttons {
+    margin: 10px;
+    max-width: 80px;
+    margin: 0 auto;
+    background-color: violet;
+}
+

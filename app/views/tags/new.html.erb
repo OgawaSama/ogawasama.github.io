@@ -1,0 +1,20 @@
+<section class="title"> 
+    Conectando tags
+</section>
+
+<div>
+    <%= form_with model: @tag do |form| %>
+        <section class="field">
+            <section class="input">
+                <%= form.collection_select :article_id, Article.order(:id).reverse_order, :id, :title %>
+            </section>
+            <section class="input">
+                <%= form.collection_select :hashtag_id, Hashtag.order(:id), :id, :name %>
+            </section>
+        </section>
+
+        <div>
+            <%= form.submit "Save" %>
+        </div>
+    <% end %>
+</div>

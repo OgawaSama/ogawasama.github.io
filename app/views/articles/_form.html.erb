@@ -1,0 +1,29 @@
+<div>
+    <%= form_with model: article do |form| %>
+        <div class="field">
+            <section class="input">
+                <%= form.label :title %>
+                <%= form.text_field :title, :size => 50 %>
+            </section>
+
+            <section class="input">
+                <%= form.label :subtitle %>
+                <%= form.text_field :subtitle, :size => 50 %>
+            </section>
+
+            <section class="input">
+                <%= form.label :tldr %>
+                <%= form.text_area :tldr, :cols => "50" %>
+            </section>
+
+            
+            <section class="rich_text">
+                <%= form.rich_textarea :content %>
+            </section>
+        </div>
+
+        <div>
+            <%= form.submit "Save" %>
+        </div>
+    <% end %>
+</div>

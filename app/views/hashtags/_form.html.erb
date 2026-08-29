@@ -1,0 +1,14 @@
+<div>
+    <%= form_with model: hashtag do |form| %>
+        <div class="field">
+            <section class="input">
+                <%= form.label :name %>
+                <%= form.text_field :name, :size => 50 %>
+            </section>
+        </div>
+
+        <div>
+            <%= form.submit "Save" %>
+        </div>
+    <% end %>
+</div>

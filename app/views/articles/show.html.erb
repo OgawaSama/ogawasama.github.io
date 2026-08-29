@@ -1,0 +1,53 @@
+<section class="show_article">
+    <div>
+        <section class="title">
+            <%= @article.title %>
+        </section>
+        <section class="subtitle">
+            <%= @article.subtitle %>
+        </section>
+    </div>
+    <div>
+        <% if @article.tags.any? %>
+            <section class="article_tags">
+                <% @article.tags.each do |tag| %>
+                    <%= link_to tag.hashtag do %>
+                        #<%= tag.hashtag.name %> 
+                    <% end %>
+                <% end %>
+            </section>
+            </end>
+        <% end %>
+        <section class="date">
+            <%= @article.created_at.localtime().to_fs(:long) %>
+            <% if (@article.created_at.to_fs(:long) != @article.updated_at.to_fs(:long)) %>
+                <p><b>Last updated at: </b><%= @article.updated_at.localtime().to_fs(:long) %></p>
+            <% end %>
+        </section>
+    </div>
+    <p><b>TL;DR: </b><%= @article.tldr %></p>
+    <div>
+        <section class="article_body">
+            <%= @article.content %>
+        </section>
+    </div>
+</section>
+
+<div data-controller="clipboard">
+<br>
+<section class="share_button">
+    <%= link_to "Share this!", sorry_path %>
+</section>
+<br>
+</div>
+<br>
+<section class="back_button">
+    <%= link_to "Go back", root_path %>
+</section>
+<br>
+
+<% if authenticated? %>
+<section class="admin_buttons">
+    <%= link_to "EDIT", edit_article_path(@article) if authenticated? %>
+</section>
+<% end %>

@@ -1,0 +1,26 @@
+<div>
+    <section class="title">
+        #<%= @hashtag.name %>
+    </section>
+
+    <section class="list">
+        <% @hashtag.articles.each do |article| %>
+            <section class="item">
+                <%= render article %>
+            </section>
+        <% end %>
+    </section>
+</div>
+
+<% if authenticated? %>
+<br>
+<section class="admin_buttons">
+    <%= link_to "NEW HASHTAG", new_hashtag_path(@new_hashtag) if authenticated? %>
+</section>
+<br>
+<br>
+<section class="admin_buttons">
+    <%= link_to "INDEX", hashtag_index_path() if authenticated? %>
+</section>
+<br>
+<% end %>

@@ -1,0 +1,22 @@
+<section class="article_title">
+    <%= link_to article do %>
+        <%= article.title %>
+    <% end %>
+</section>
+<section class="date">
+    <%= article.created_at.localtime().to_fs(:long) %>
+    <% if (article.created_at.to_fs(:long) != article.updated_at.to_fs(:long)) %>
+        <p><b>Last updated at: </b><%= article.updated_at.localtime().to_fs(:long) %></p>
+    <% end %>
+</section>
+<% if article.tags.any? %>
+    <section class="article_tags">
+        <% article.tags.each do |tag| %>
+            <%= link_to tag.hashtag do %>
+                #<%= tag.hashtag.name %> 
+            <% end %>
+        <% end %>
+    </section>
+    </end>
+<% end %>
+

@@ -1,0 +1,20 @@
+<div>
+    <section class="title">
+        Artigos<br>
+    </section>
+    <section class="list">
+        <% @articles.each do |article| %>
+            <section class="item">
+                <%= render article %>
+            </section>
+        <% end %>
+    </section>
+</div>
+
+<% if authenticated? %>
+<br>
+<section class="admin_buttons">
+    <%= link_to "NEW", new_article_path(@article) if authenticated? %>
+</section>
+<br>
+<% end %>
